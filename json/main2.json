@@ -1,0 +1,49 @@
+[{
+        "ID": "01",
+        "BRAND": "POOMA"
+    },
+    {
+        "ID": "02",
+        "BRAND": "ARMANI"
+    },
+    {
+        "ID": "03",
+        "BRAND": "ZARA"
+    },
+    {
+        "ID": "04",
+        "BRAND": "BLINK"
+    },
+    {
+        "ID": "05",
+        "BRAND": "ADIDASS"
+    },
+    {
+        "ID": "06",
+        "BRAND": "JACK & JONS"
+    },
+    {
+        "ID": "07",
+        "BRAND": "FENDI"
+    },
+    {
+        "ID": "08",
+        "BRAND": "BURBERRY"
+    },
+    {
+        "ID": "09",
+        "BRAND": "HERMENS"
+    },
+    {
+        "ID": "10",
+        "BRAND": "HOUSE OF VERSAXE"
+    },
+    {
+        "ID": "11",
+        "BRAND": "RALPH LAUREN"
+    },
+    {
+        "ID": "12",
+        "BRAND": "GUCCI"
+    }
+]

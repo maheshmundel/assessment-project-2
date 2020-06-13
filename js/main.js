@@ -11,12 +11,12 @@ function getText() {
     // Communication
     xhr.onload = function() {
         if (this.status == 200) {
-            var user = JSON.parse(this.responseText);
+            var users = JSON.parse(this.responseText);
             var outputs = '';
-            for (var i = 0; i < user.length; i++) {
+            for (var i = 0; i < users.length; i++) {
                 outputs += '<ul>' +
-                    '<li>ID : ' + user[i].ID + '</li>' +
-                    '<li>ID : ' + user[i].BRAND + '</li>' +
+                    '<li>ID : ' + users[i].ID + '</li>' +
+                    '<li>ID : ' + users[i].BRAND + '</li>' +
                     '</ul>';
             }
 
@@ -28,15 +28,15 @@ function getText() {
     xhr.send();
 }
 
-document.getElementById('.clothstype').addEventListener('click', getAText);
+document.getElementById('clothstype').addEventListener('click', getAText);
 
 function getAText() {
     // AJAX Call
     // Create an Object
-    var xhr = XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
 
     // Open the portal
-    xhr.open('GET', 'main.json', true);
+    xhr.open('GET', '../json/main.json', true);
 
     // Communication
     xhr.onload = function() {

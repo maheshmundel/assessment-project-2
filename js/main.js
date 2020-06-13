@@ -12,15 +12,15 @@ function getText() {
     xhr.onload = function() {
         if (this.status == 200) {
             var user = JSON.parse(this.responseText);
-            var output = '';
+            var outputs = '';
             for (var i = 0; i < user.length; i++) {
-                output += '<ul>' +
+                outputs += '<ul>' +
                     '<li>ID : ' + user[i].ID + '</li>' +
                     '<li>ID : ' + user[i].BRAND + '</li>' +
                     '</ul>';
             }
 
-            document.getElementById('firstcontainer').innerHTML = output;
+            document.getElementById('firstcontainer').innerHTML = outputs;
         }
     }
 

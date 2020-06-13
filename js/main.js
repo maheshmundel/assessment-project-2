@@ -28,30 +28,32 @@ function getText() {
     xhr.send();
 }
 
-// document.getElementById('.clothstype').addEventListener('click', getAText);
+document.getElementById('.clothstype').addEventListener('click', getAText);
 
-// function getAText() {
-//     // AJAX Call
-//     // Create an Object
-//     var xhr = XMLHttpRequest();
+function getAText() {
+    // AJAX Call
+    // Create an Object
+    var xhr = XMLHttpRequest();
 
-//     // Open the portal
-//     xhr.open('GET', 'main.json', true);
+    // Open the portal
+    xhr.open('GET', 'main.json', true);
 
-//     // Communication
-//     xhr.onload = function() {
-//         if (this.status == 200) {
-//             var user = JSON.parse(this.responceText);
-//             var output = '';
-//             output += '<ul>' +
-//                 '<li>ID : ' + user.ID + '</li>' +
-//                 '<li>ID : ' + user.CLOTHTYPE + '</li>' +
-//                 '</ul>';
+    // Communication
+    xhr.onload = function() {
+        if (this.status == 200) {
+            var user = JSON.parse(this.responseText);
+            var output = '';
+            for (var i = 0; i < user.length; i++) {
+                output += '<ul>' +
+                    '<li>ID : ' + user[i].ID + '</li>' +
+                    '<li>ID : ' + user[i].BRAND + '</li>' +
+                    '</ul>';
+            }
 
-//             document.getElementById('secindcontainer').innerHTML = output;
-//         }
-//     }
+            document.getElementById('secindcontainer').innerHTML = output;
+        }
+    }
 
-//     // Send the request
-//     xhr.send();
-// }
+    // Send the request
+    xhr.send();
+}

@@ -1,22 +1,24 @@
-document.getElementById('.clothsbrands').addEventListener('click', getText);
+document.getElementById('clothsbrands').addEventListener('click', getText);
 
 function getText() {
     // AJAX Call
     // Create an Object
-    var xhr = XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
 
     // Open the portal
-    xhr.open('GET', 'main2.json', true);
+    xhr.open('GET', '../json/main2.json', true);
 
     // Communication
     xhr.onload = function() {
         if (this.status == 200) {
-            var user = JSON.parse(this.responceText);
+            var user = JSON.parse(this.responseText);
             var output = '';
-            output += '<ul>' +
-                '<li>ID : ' + user.ID + '</li>' +
-                '<li>ID : ' + user.BRAND + '</li>' +
-                '</ul>';
+            for (var i = 0; i < user.length; i++) {
+                output += '<ul>' +
+                    '<li>ID : ' + user[i].ID + '</li>' +
+                    '<li>ID : ' + user[i].BRAND + '</li>' +
+                    '</ul>';
+            }
 
             document.getElementById('firstcontainer').innerHTML = output;
         }
@@ -26,30 +28,30 @@ function getText() {
     xhr.send();
 }
 
-document.getElementById('.clothstype').addEventListener('click', getAText);
+// document.getElementById('.clothstype').addEventListener('click', getAText);
 
-function getAText() {
-    // AJAX Call
-    // Create an Object
-    var xhr = XMLHttpRequest();
+// function getAText() {
+//     // AJAX Call
+//     // Create an Object
+//     var xhr = XMLHttpRequest();
 
-    // Open the portal
-    xhr.open('GET', 'main.json', true);
+//     // Open the portal
+//     xhr.open('GET', 'main.json', true);
 
-    // Communication
-    xhr.onload = function() {
-        if (this.status == 200) {
-            var user = JSON.parse(this.responceText);
-            var output = '';
-            output += '<ul>' +
-                '<li>ID : ' + user.ID + '</li>' +
-                '<li>ID : ' + user.CLOTHTYPE + '</li>' +
-                '</ul>';
+//     // Communication
+//     xhr.onload = function() {
+//         if (this.status == 200) {
+//             var user = JSON.parse(this.responceText);
+//             var output = '';
+//             output += '<ul>' +
+//                 '<li>ID : ' + user.ID + '</li>' +
+//                 '<li>ID : ' + user.CLOTHTYPE + '</li>' +
+//                 '</ul>';
 
-            document.getElementById('secindcontainer').innerHTML = output;
-        }
-    }
+//             document.getElementById('secindcontainer').innerHTML = output;
+//         }
+//     }
 
-    // Send the request
-    xhr.send();
-}
+//     // Send the request
+//     xhr.send();
+// }

@@ -16,7 +16,7 @@ function getText() {
             for (var i = 0; i < users.length; i++) {
                 outputs += '<ul>' +
                     '<li>ID : ' + users[i].ID + '</li>' +
-                    '<li>ID : ' + users[i].BRAND + '</li>' +
+                    '<li>BRAND : ' + users[i].BRAND + '</li>' +
                     '</ul>';
             }
 

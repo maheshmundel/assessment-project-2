@@ -15,8 +15,8 @@ function getText() {
             var outputs = '';
             for (var i = 0; i < users.length; i++) {
                 outputs += '<ul>' +
-                    '<li>ID : ' + users[i].ID + '</li>' +
-                    '<li>BRAND : ' + users[i].BRAND + '</li>' +
+                    '<li>' + users[i].ID + 
+                    ' : ' + users[i].BRAND + '</li>' +
                     '</ul>';
             }
 
@@ -45,8 +45,8 @@ function getAText() {
             var output = '';
             for (var i = 0; i < user.length; i++) {
                 output += '<ul>' +
-                    '<li>ID : ' + user[i].ID + '</li>' +
-                    '<li>CLOTHTYPE: ' + user[i].CLOTHTYPE + '</li>' +
+                    '<li>' + user[i].ID + 
+                    ' : ' + user[i].CLOTHTYPE + '</li>' +
                     '</ul>';
             }
 

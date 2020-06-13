@@ -50,7 +50,7 @@ function getAText() {
                     '</ul>';
             }
 
-            document.getElementById('secindcontainer').innerHTML = output;
+            document.getElementById('secondcontainer').innerHTML = output;
         }
     }
 

@@ -738,10 +738,21 @@ button:hover {
 }
 
 #firstcontainer ul {
+    margin-left: 20px;
     list-style: none;
 }
 
 #firstcontainer ul li {
+    margin-bottom: 5px;
+    width: 300px;
+}
+
+#secondcontainer ul {
+    margin-left: 20px;
+    list-style: none;
+}
+
+#secondcontainer ul li {
     margin-bottom: 5px;
     width: 300px;
 }

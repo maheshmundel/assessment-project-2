@@ -33,13 +33,13 @@ document.getElementById('clothstype').addEventListener('click', getAText);
 function getAText() {
     // AJAX Call
     // Create an Object
-    var xhr = new XMLHttpRequest();
+    var xhra = new XMLHttpRequest();
 
     // Open the portal
-    xhr.open('GET', '../json/main.json', true);
+    xhra.open('GET', '../json/main.json', true);
 
     // Communication
-    xhr.onload = function() {
+    xhra.onload = function() {
         if (this.status == 200) {
             var user = JSON.parse(this.responseText);
             var output = '';
@@ -55,5 +55,5 @@ function getAText() {
     }
 
     // Send the request
-    xhr.send();
+    xhra.send();
 }

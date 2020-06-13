@@ -737,5 +737,14 @@ button:hover {
     box-shadow: 0 0 10px lightgreen, 0 0 20px lightgreen, 0 0 1px lightgreen;
 }
 
+#firstcontainer ul {
+    list-style: none;
+}
+
+#firstcontainer ul li {
+    margin-bottom: 5px;
+    width: 300px;
+}
+
 
 /* CSS Script starts for ohter.html */

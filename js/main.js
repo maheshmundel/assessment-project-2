@@ -46,7 +46,7 @@ function getAText() {
             for (var i = 0; i < user.length; i++) {
                 output += '<ul>' +
                     '<li>ID : ' + user[i].ID + '</li>' +
-                    '<li>ID : ' + user[i].CLOTHTYPE + '</li>' +
+                    '<li>CLOTHTYPE: ' + user[i].CLOTHTYPE + '</li>' +
                     '</ul>';
             }
 
